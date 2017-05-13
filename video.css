@@ -1,0 +1,365 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,body {
+	height: 100%;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++*/
+/*====================Fonts======================*/
+
+
+@font-face {
+  font-family: 'SFUIregular';
+  src: url('fonts/SFUIText-Regular.eot');
+  src: url('fonts/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/SFUIText-Regular.woff') format('woff'),
+       url('fonts/SFUIText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUIsemibold';
+  src: url('fonts/SFUIText-Semibold.eot');
+  src: url('fonts/SFUIText-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/SFUIText-Semibold.woff') format('woff'),
+       url('fonts/SFUIText-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUIbold';
+  src: url('fonts/SFUIText-Bold.eot');
+  src: url('fonts/SFUIText-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/SFUIText-Bold.woff') format('woff'),
+       url('fonts/SFUIText-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUImedium';
+  src: url('fonts/SFUIText-Medium.eot');
+  src: url('fonts/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
+       url('fonts/SFUIText-Medium.woff') format('woff'),
+       url('fonts/SFUIText-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*====================VIDEO=======================*/
+
+.video {
+  width: 96%;
+  height: 0px;
+  margin: 2% 2% 0 2%;
+  transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  z-index: 9999;
+}
+
+video {
+  display: none;
+  z-index: -9999;
+  width: 100%;
+}
+
+.IIV::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+
+.animation {
+  animation: open 1s linear 0s forwards;
+}
+
+@keyframes open {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 205px;
+  }
+}
+
+
+
+/*==========ОБЩИЕ ДЛЯ ВСЕГО ДОКУМЕНТА============*/
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  background-color: #F4F4F4;
+  margin: 0 auto 0;
+  position: relative;
+}
+
+
+/*================HEADER & MENU===============*/
+.header {
+  width: 100%;
+  height: 64px;
+  background-color: #00B0DD;
+  position: relative;
+  
+}
+
+.header .city {
+  width: 250px;
+  margin: 0px auto 0px;
+  font-family: 'SFUIbold';
+  font-size: 15px;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.header .dates {
+  width: 226px;
+  margin: 0px auto 0px;
+  font-family: 'SFUIsemibold';
+  font-size: 9px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.net {
+  width: 34px;
+  height: 6px;
+  margin: 5px 0px 0px 5px;
+  display: inline-block;
+  float: left;
+}
+
+.battery {
+  width: 25px;
+  height: 10px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 5px;
+  float: right;
+}
+
+.hlop {
+  width: 15px;
+  height: 9px;
+  position: absolute;
+  top: 30px;
+  left: 19px;
+}
+/*=================================*/
+.menu {
+  width: 100%;
+  height: 50px;
+  
+}
+
+.menu ul {
+  display: flex;
+  margin: 6px 2% 6px 2%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.menu ul li {
+  height: 38px;
+  width: 121px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 13px;
+  color: #ABABAB;
+  font-family: 'SFUIsemibold';
+}
+
+.menu ul li:first-child {
+  border: 1px solid #00B0DD;
+  border-radius: 10px;
+  color: #00B0DD;
+}
+
+
+
+/*=====================CARDS===================*/
+.card {
+  height: 135px;
+  background-color: white;
+  width: 96%;
+  margin: 2% 2% 0 2%;
+  border-radius: 13px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+  padding: 15px 15px 15px 0px;
+  
+}
+
+.price>* {
+  display: inline-block;
+  font-family: 'SFUIsemibold';
+  color: #00B0DD;
+  font-size: 20px;
+}
+.price p {
+margin-left: 25px;
+}
+
+.price img {
+  width: 89px;
+  height: 9px;
+  float: right;
+  margin-top: 3px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .info ul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.card .info ul li {
+    margin: 2px auto 0px;;
+}
+
+.info ul li p:nth-child(1) {
+  font-size: 12px;
+  font-family: 'SFUIregular';
+  margin-bottom: 3px;
+  color: #ACACAC;
+}
+
+.info ul li p:nth-child(2) {
+  font-size: 12px;
+  font-family: 'SFUIregular';
+  margin-bottom: 3px;
+  color: #5D5D5D;
+}
+
+/*=====================FOOTER===================*/
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  box-shadow: 0px -1px 2px rgba(0,0,0,0.2);
+  position: fixed;
+  bottom: 0;
+}
+
+.footer ul li img {
+  width: 22px;
+  height: 21px;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer p {
+font-size: 10px;
+color: #00B0DD;
+font-family: 'SFUImedium';
+margin-top: 5px;
+}
+
+.footer ul li {
+  display: flex;
+  flex-direction: column;
+  margin: 8px auto 0px;
+}
+
+.footer ul li * {
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
